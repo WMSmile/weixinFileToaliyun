@@ -3,6 +3,7 @@
 
 上传图片的代码
 1、主要代码uploadAliyun.js（我拿来上传图片的，理论上可以上传任何文件）
+
 ```
 const env = require('../config.js'); //配置文件，在这里配置你的OSS keyId和KeySecret,timeout:87600;
 //更好的做法是把这些信息放到服务器进行签名，防止信息泄露
@@ -94,10 +95,12 @@ const getSignature = function (policyBase64) {
 module.exports = uploadFile;
 ```
 2、使用
+
 ```
 const uploadImage = require('../../utils/uploadAliyun.js');
 ```
 在需要使用的地方
+
 ```
 //filePath为要上传的本地文件的路径
 //images/为oss目录
